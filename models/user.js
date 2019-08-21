@@ -3,32 +3,21 @@ const mongoose = require('./connection.js')
 
 
 
-const SampleModelSchema = new mongoose.Schema({
- name: String
+const UserSchema = new mongoose.Schema({
+ 
 })
 
-/* Step 3
- *
- * TODO: create collection API
- * NOTE: skip this if you are not using mongoose
- *
- */
-//const SampleCollection = mongoose.model('Sample', SampleModelSchema)
+const UserCollection = mongoose.model('User', UserSchema)
+ 
 
-/* Step 4
- *
- * TODO: delete this it's just a sample
- *
- */
+
 function getHelloWorldString() {
   return 'hell user'
 }
 
-/* Step 5
- *
- * TODO: export all functions from this file by adding their names as keys to this
- * object
- */
+
+
+
 module.exports = {
   getHelloWorldString
 }
