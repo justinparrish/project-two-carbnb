@@ -4,7 +4,7 @@ const mongoose = require('./connection.js')
 
 
 const CarSchema = new mongoose.Schema ({
-  name: Array,
+  name: String,
   year: Number,
   make: String,
   model: String
@@ -14,18 +14,44 @@ const CarSchema = new mongoose.Schema ({
 const CarCollection = mongoose.model('Car', CarSchema)
 
 
+const createCar = () => {
+  return CarCollection.create({
+    name: '',
+    year: 2000,
+    make: '',
+    model: ''
+  })
+}
 
+const addCar = (newCar) => {
+  return CarCollection.insertMany([newCar])
+}
 
-function getHelloWorldString() {
-  return 'What kind of car you have?'
+const getCar = (vinNum) => {
+  return CarCollection.findById({_id: vinNum})
+}
+
+const getCars = () => {
+  return CarCollection.find()
+}
+
+const editCar = (vinNum, updatedCar) => {
+  return CarCollection.updateOne({_id: vinNum}, updatedCar)
+}
+
+const deleteCar = (vinNum) => {
+  return CarCollection.findByIdAndRemove({_id: vinNum})
 }
 
 
 
 
-
-
-
 module.exports = {
-  getHelloWorldString
+  addCar,
+  createCar,
+  deleteCar,
+  editCar,
+  getCar,
+  getCars
+  
 }
