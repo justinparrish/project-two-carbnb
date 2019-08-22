@@ -53,3 +53,43 @@ const carApi = require('./car')
 //     console.log('ADDED NEW CAR')
 //     console.log(addedCar)
 // })
+
+// carApi.deleteCar('5d5eb942ef73488639fad332').then((deletedCar) => {
+//     console.log('DELETED CAR')
+//     console.log(deletedCar)
+// })
+
+
+
+const descriptionApi = require('./description')
+
+// descriptionApi.createDescription().then((createdDescript) => {
+//     console.log('CREATED DESCRIPTION')
+//     console.log(createdDescript)
+// })
+
+descriptionApi.getDescriptions().then((foundAll) => {
+    console.log('ALL DESCRIPTIONS')
+    console.log(foundAll)
+})
+
+// descriptionApi.editDescription('5d5ed058d2bff28c90b4c305', {color: 'Black', mpg: 22, accident: true}).then((edited) => {
+//     console.log('EDITED DESCRIPTION')
+//     console.log(edited)
+// })
+
+// descriptionApi.addDescription({color: 'Tan', comfort: 'Very comfortable', seats: 5,
+//  mpg: 26, childFriendly: true, accident: false, smoker: false}).then((addDescription) => {
+//     console.log('ADDED DESCRIPTION')
+//     console.log(addDescription)
+// })
+
+// descriptionApi.getDescription('5d5ed0a5d700028cd8ef68ae').then((foundDescription) => {
+//     console.log('SINGLE DESCRIPTION')
+//     console.log(foundDescription)
+// })
+
+descriptionApi.deleteDescription('5d5ed236f403398e348f5b6f').then((deleted) => {
+    console.log('DELETED')
+    console.log(deleted)
+})
