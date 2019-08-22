@@ -8,8 +8,8 @@ const descriptionApi = require('../models/description.js')
 const descriptonRouter = express.Router()
 
 
-descriptonRouter.get('/', (req, res) => {
-  res.send(descriptionApi.getHelloWorldString())
+descriptonRouter.get('/describecar', (req, res) => {
+  res.render('template/describeCar.hbs', {})
 })
 
 

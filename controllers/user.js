@@ -9,14 +9,13 @@ const userRouter = express.Router()
 
 
 userRouter.get('/', (req, res) => {
-  res.render('layout')
+  res.render('template/homePage')
 })
 
 userRouter.get('/addyourself', (req,res) => {
   res.render('template/addYourself', {})
 })
 
-userRouter.get('/addcar', (rew))
 
 
 userRouter.get('/:id', (req,res) => {
