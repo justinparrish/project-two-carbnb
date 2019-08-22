@@ -8,7 +8,7 @@ a car for your own creative use.</p>
 <h2>Links</h2>
 <a href="#">Heruko</a>
 <br />
-<a href="#">Project Board</a>
+<a href="https://github.com/justinparrish/project-two-carrnd/projects/1?add_cards_query=is%3Aopen">Project Board</a>
 <br/>
 
 <h2>Technologies Used</h2>
@@ -21,7 +21,6 @@ a car for your own creative use.</p>
     <li>CSS</li>
     <li>Heroku</li>
     <li>GitHub Project Board</li>
-    <li></li>
 
 </ul>
 <h2>Wire Frames</h2>
