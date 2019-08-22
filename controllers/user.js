@@ -8,8 +8,10 @@ const userApi = require('../models/user.js')
 const userRouter = express.Router()
 
  
+
+
 userRouter.get('/', (req, res) => {
-  res.send(userApi.getHelloWorldString())
+  res.render('layout')
 })
 
 
