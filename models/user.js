@@ -2,7 +2,6 @@
 const mongoose = require('./connection.js')
 
 
-
 const UserSchema = new mongoose.Schema({
   name: String,
   location: String,
@@ -22,22 +21,26 @@ const createUser = () => {
   })
 }
 
-const findUser = () => {
-  return UserCollection.findOne({
-    name
-  })
+const addUser = (newUser) => {
+  return UserCollection.insertMany( [newUser] )
 }
 
-const editUser = (name, {updateInfo}) => {
-  return UserCollection.findOneAndUpdate(
-    name, {updateInfo}
-  )
+
+const findUsers = () => {
+  return UserCollection.find()
 }
 
-const deleteUser = (name) => {
-  return UserCollection.findByIdAndDelete({
-    name
-  })
+
+const findUser = (userId) => {
+  return UserCollection.findById({_id: userId})
+}
+
+const editUser = (userId, updatedInfo) => {
+  return UserCollection.updateOne({_id: userId}, updatedInfo)
+}
+
+const deleteUser = (userId) => {
+  return UserCollection.findByIdAndDelete({_id: userId})
 }
 
 const linkToCar = () => {
@@ -45,9 +48,11 @@ const linkToCar = () => {
 }
 
 module.exports = {
+  addUser,
   createUser,
   deleteUser,
   editUser,
   findUser,
+  findUsers,
   linkToCar
 }
