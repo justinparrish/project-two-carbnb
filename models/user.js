@@ -14,13 +14,40 @@ const UserCollection = mongoose.model('User', UserSchema)
  
 
 
-function getHelloWorldString() {
-  return 'hell user'
+const createUser = () => {
+  return UserCollection.create({
+    name: '',
+    location: '',
+    email: ''
+  })
 }
 
+const findUser = () => {
+  return UserCollection.findOne({
+    name
+  })
+}
 
+const editUser = (name, {updateInfo}) => {
+  return UserCollection.findOneAndUpdate(
+    name, {updateInfo}
+  )
+}
 
+const deleteUser = (name) => {
+  return UserCollection.findByIdAndDelete({
+    name
+  })
+}
+
+const linkToCar = () => {
+
+}
 
 module.exports = {
-  getHelloWorldString
+  createUser,
+  deleteUser,
+  editUser,
+  findUser,
+  linkToCar
 }
