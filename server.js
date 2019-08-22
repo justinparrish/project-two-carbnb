@@ -28,7 +28,7 @@ app.set('view engine', 'hbs')
 
 app.use('/user', userRouter)
 app.use('/user/cars', carRouter)
-app.use('/user/car/description', descriptonRouter)
+app.use('/user/cars/description', descriptonRouter)
 
 
 const PORT = process.env.PORT || 3000 
