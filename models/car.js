@@ -40,7 +40,7 @@ const editCar = (vinNum, updatedCar) => {
 }
 
 const deleteCar = (vinNum) => {
-  return CarCollection.findByIdAndRemove({_id: vinNum})
+  return CarCollection.findByIdAndDelete({_id: vinNum})
 }
 
 
