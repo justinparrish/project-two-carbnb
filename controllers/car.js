@@ -6,8 +6,10 @@ const carApi = require('../models/car.js')
 const carRouter = express.Router()
 
  
-carRouter.get('/', (req, res) => {
-  res.send(carApi.getHelloWorldString())
+carRouter.get('/', (req,res) => {
+  carApi.getCars().then((allCars) => {
+    res.send(allCars)
+  })
 })
 
 

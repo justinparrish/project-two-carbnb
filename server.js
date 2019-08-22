@@ -27,7 +27,7 @@ app.set('view engine', 'hbs')
 
 
 app.use('/user', userRouter)
-app.use('/user/car', carRouter)
+app.use('/user/cars', carRouter)
 app.use('/user/car/description', descriptonRouter)
 
 
