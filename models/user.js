@@ -4,6 +4,9 @@ const mongoose = require('./connection.js')
 
 
 const UserSchema = new mongoose.Schema({
+  name: String,
+  location: String,
+  email: String
  
 })
 

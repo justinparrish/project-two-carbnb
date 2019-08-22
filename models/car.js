@@ -4,6 +4,10 @@ const mongoose = require('./connection.js')
 
 
 const CarSchema = new mongoose.Schema ({
+  name: Array,
+  year: Number,
+  make: String,
+  model: String
 
 })
 

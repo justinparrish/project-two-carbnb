@@ -4,6 +4,13 @@ const mongoose = require('./connection.js')
 
 
 const DescriptionSchema = new mongoose.Schema({
+  color: String,
+  comfort: String,
+  seats: Number,
+  mpg: Number,
+  childFriendly: Boolean,
+  accident: Boolean,
+  smoker: Boolean
 
 })
 
