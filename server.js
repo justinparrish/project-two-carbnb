@@ -5,7 +5,7 @@ const methodOverride = require('method-override')
 
 
 const { userRouter } = require('./controllers/user.js')
-const { descriptonRouter } = require('./controllers/description.js')
+const { descriptionRouter } = require('./controllers/description.js')
 const { carRouter } = require('./controllers/car.js')
 
 
@@ -28,7 +28,7 @@ app.set('view engine', 'hbs')
 
 app.use('/user', userRouter)
 app.use('/user/cars', carRouter)
-app.use('/user/cars/description', descriptonRouter)
+app.use('/user/cars/description', descriptionRouter)
 
 
 const PORT = process.env.PORT || 3000 

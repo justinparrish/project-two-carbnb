@@ -5,14 +5,20 @@ const express = require('express')
 const descriptionApi = require('../models/description.js')
 
 
-const descriptonRouter = express.Router()
+const descriptionRouter = express.Router()
 
 
-descriptonRouter.get('/describecar', (req, res) => {
+descriptionRouter.get('/describecar', (req, res) => {
   res.render('template/describeCar.hbs', {})
+})
+
+descriptionRouter.post('/', (req,res) => {
+  descriptionApi.addDescription(req.body).then(() => {
+    res.send('Post listing')
+  })
 })
 
 
 module.exports = {
-    descriptonRouter
+    descriptionRouter
 }

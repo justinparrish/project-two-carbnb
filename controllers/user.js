@@ -18,21 +18,6 @@ userRouter.get('/addyourself', (req,res) => {
 
 
 
-userRouter.get('/:id', (req,res) => {
-  res.send(userApi.findUser())
-})
-
-userRouter.put('/:id', (req,res) => {
-  res.send(userApi.addUser())
-})
-
-userRouter.post('/', (res,req) => {
-  res.send(userApi.editUser())
-})
-
-userRouter.delete('/:id', (res,req) => {
-  res.send(userApi.deleteUser())
-})
 
 
 

@@ -16,6 +16,12 @@ carRouter.get('/', (req,res) => {
   })
 })
 
+carRouter.post('/', (req,res) => {
+  carApi.addCar(req.body).then(() => {
+    res.render('template/carListing')
+  })
+})
+
 module.exports = {
   carRouter
 }
