@@ -16,14 +16,44 @@ const DescriptionSchema = new mongoose.Schema({
 
 const DescriptionCollection = mongoose.model('Description', DescriptionSchema)
 
+const createDescription = () => {
+  return DescriptionCollection.create({
+    color: '',
+    comfort: '',
+    seats: 4,
+    mpg: 18,
+    childFriendly: true,
+    accident: false,
+    smoker: false
+  })
+}
 
+const addDescription = (newDescription) => {
+  return DescriptionCollection.insertMany( [newDescription] )
+}
 
+const getDescription = (descriptionId) => {
+  return DescriptionCollection.findById({_id: descriptionId})
+}
 
-function getHelloWorldString() {
-  return 'More about your car?'
+const getDescriptions = () => {
+  return DescriptionCollection.find()
+}
+
+const editDescription = (descriptionId, updatedDescription) => {
+  return DescriptionCollection.updateOne({_id: descriptionId}, updatedDescription)
+}
+
+const deleteDescription = (descriptionId) => {
+  return DescriptionCollection.findByIdAndDelete({_id: descriptionId})
 }
 
 
 module.exports = {
-  getHelloWorldString
+  addDescription,
+  createDescription,
+  deleteDescription,
+  editDescription,
+  getDescription,
+  getDescriptions
 }
