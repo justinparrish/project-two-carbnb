@@ -34,10 +34,10 @@ const carApi = require('./car')
 //     console.log(created)
 // })
 
-carApi.getCars().then((foundAllCars) => {
-    console.log('ALL CARS')
-    console.log(foundAllCars)
-})
+// carApi.getCars().then((foundAllCars) => {
+//     console.log('ALL CARS')
+//     console.log(foundAllCars)
+// })
 
 // // carApi.getCar('5d5eb942ef73488639fad332').then((foundCar) => {
 // //     console.log('FOUND CAR')
@@ -68,10 +68,10 @@ const descriptionApi = require('./description')
 //     console.log(createdDescript)
 // })
 
-descriptionApi.getDescriptions().then((foundAll) => {
-    console.log('ALL DESCRIPTIONS')
-    console.log(foundAll)
-})
+// descriptionApi.getDescriptions().then((foundAll) => {
+//     console.log('ALL DESCRIPTIONS')
+//     console.log(foundAll)
+// })
 
 // descriptionApi.editDescription('5d5ed058d2bff28c90b4c305', {color: 'Black', mpg: 22, accident: true}).then((edited) => {
 //     console.log('EDITED DESCRIPTION')

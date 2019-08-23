@@ -4,7 +4,7 @@ const mongoose = require('./connection.js')
 
 
 const CarSchema = new mongoose.Schema ({
-  name: String,
+  pname: String,
   year: Number,
   make: String,
   model: String

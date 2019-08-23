@@ -2,6 +2,8 @@
 const express = require('express')
 
 const carApi = require('../models/car.js')
+const userApi = require('../models/user.js')
+
 
 const userRouter = express.Router()
 const carRouter = express.Router()
@@ -17,6 +19,8 @@ carRouter.get('/:id', (req,res) => {
     res.send(200)
   })
 })
+
+
 
 
 carRouter.get('/', (req,res) => {
