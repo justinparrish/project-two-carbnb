@@ -43,12 +43,16 @@ const deleteCar = (vinNum) => {
   return CarCollection.findByIdAndDelete({_id: vinNum})
 }
 
+const deleteAllCars = () => {
+  return CarCollection.deleteMany()
+}
 
 
 
 module.exports = {
   addCar,
   // createCar,
+  deleteAllCars,
   deleteCar,
   editCar,
   getCar,

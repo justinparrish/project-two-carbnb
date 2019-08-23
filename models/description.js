@@ -48,10 +48,15 @@ const deleteDescription = (descriptionId) => {
   return DescriptionCollection.findByIdAndDelete({_id: descriptionId})
 }
 
+const deleteAllDescript = () => {
+  return DescriptionCollection.deleteMany()
+}
+
 
 module.exports = {
   addDescription,
   createDescription,
+  deleteAllDescript,
   deleteDescription,
   editDescription,
   getDescription,
