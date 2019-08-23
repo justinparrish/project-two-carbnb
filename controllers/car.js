@@ -5,22 +5,41 @@ const carApi = require('../models/car.js')
 
 const carRouter = express.Router()
 
- 
-carRouter.get('/addcar', (req,res) => {
-  res.render('template/addCar.hbs', {})
+
+carRouter.get('/:index', (req,res) => {
+  carApi.getCar(req.params.index).then(() => {
+    res.send(200)
+  })
 })
 
 carRouter.get('/', (req,res) => {
-  carApi.getCars().then((allCars) => {
-    res.render('template/carListing', {allCars})
+  carApi.getCars().then(() => {
+    res.send(200)
   })
 })
 
 carRouter.post('/', (req,res) => {
-  carApi.addCar(req.body).then(() => {
-    res.render('template/carListing')
+  carApi.addCar().then(() => {
+    res.send(200)
   })
 })
+
+carRouter.put('/:index', (req,res) => {
+  carApi.editCar(req.params.index, req.body).then(() => {
+    res.send(200)
+  })
+})
+
+carRouter.delete('/:index', (req,res) => {
+  carApi.deleteCar(req.params.index).then(() => {
+    res.send(200)
+  })
+})
+
+
+
+
+
 
 module.exports = {
   carRouter
