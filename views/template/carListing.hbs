@@ -1,10 +1,10 @@
-<h1>Choose a Car</h1>
-<a href="/user/cars">Cars</a>
+<h1 id="choose-car">Choose a Car</h1>
+<a href="/user/">Home</a>
 
 <ul>
-    {{#each allCars}}
+    {{#each allUsers}}
     <li>
-        <a href="/user/cars/{{@index}}">{{Car.year}} {{Car.make}} {{Car.model}}</a>
+        <a href="/user/cars/{{@index}}">{{User.name}}</a>
     </li>
     {{/each}}
 </ul>
