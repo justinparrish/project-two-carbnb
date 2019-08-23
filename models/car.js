@@ -25,8 +25,8 @@ const addCar = (newCar) => {
   return CarCollection.insertMany([newCar])
 }
 
-const getCar = (vinNum) => {
-  return CarCollection.findById({_id: vinNum})
+const getCar = (id) => {
+  return CarCollection.findById(id)
 }
 
 const getCars = () => {
@@ -37,8 +37,8 @@ const editCar = (vinNum, updatedCar) => {
   return CarCollection.updateOne({_id: vinNum}, updatedCar)
 }
 
-const deleteCar = (vinNum) => {
-  return CarCollection.findByIdAndDelete({_id: vinNum})
+const deleteCar = (id) => {
+  return CarCollection.findByIdAndDelete(id)
 }
 
 const deleteAllCars = () => {
