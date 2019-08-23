@@ -34,7 +34,7 @@ userRouter.get('/:id', (req,res) => {
 })
 
 //to add a user to carListing page
-userRouter.post('/cars/carListing', (req,res) => {
+userRouter.post('/cars/carsListing', (req,res) => {
   userApi.addUser(req.body).then(() => {
     res.render('template/carListing')
   })

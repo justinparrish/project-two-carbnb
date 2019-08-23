@@ -1,13 +1,27 @@
 body, html {
     background-color: #AAF5FB;
     text-align: center;
+    font-family: cursive;
 }
 
 #choose-car {
     font-size: 50px;
-    font-family: cursive;
 }
 
 #welcome {
     font-size: 50px;
+}
+
+#rentee, #renter {
+    border: 1px solid black;
+    padding: 3px 12px 3px 12px;
+    text-decoration: none;
+    font-size: 20px;
+  
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    
 }
