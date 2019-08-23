@@ -2,3 +2,12 @@ body, html {
     background-color: #AAF5FB;
     text-align: center;
 }
+
+#choose-car {
+    font-size: 50px;
+    font-family: cursive;
+}
+
+#welcome {
+    font-size: 50px;
+}
