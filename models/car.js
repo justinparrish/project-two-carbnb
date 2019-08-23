@@ -4,7 +4,6 @@ const mongoose = require('./connection.js')
 
 
 const CarSchema = new mongoose.Schema ({
-  pname: String,
   year: Number,
   make: String,
   model: String
@@ -16,7 +15,6 @@ const CarCollection = mongoose.model('Car', CarSchema)
 
 // const createCar = () => {
 //   return CarCollection.create({
-//     name: '',
 //     year: 2000,
 //     make: '',
 //     model: ''

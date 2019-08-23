@@ -27,9 +27,9 @@ userRouter.get('/cars/carsListing', (req,res) => {
 })
 
 //to find a use to edit
-userRouter.get('/:id', (req,res) => {
-  userApi.findUser(req.params.id).then(() => {
-    res.send('edit user')
+userRouter.get('/:userId', (req,res) => {
+  userApi.findUser(req.params.userId).then(oneUser => {
+    res.render('template/editUser', {oneUser ,userId :req.params.userId})
   })
 })
 
@@ -41,16 +41,16 @@ userRouter.post('/cars/carsListing', (req,res) => {
 })
 
 //to update a user
-userRouter.put('/:id', (req,res) => {
-  userApi.editUser(req.params.id, req.body).then(() => {
-    res.send(200)
+userRouter.put('/:userId', (req,res) => {
+  userApi.editUser(req.params.userId, req.body).then(() => {
+    res.render('template/carListing')
   })
 })
 
 //to delete a user
-userRouter.delete('/:id', (req,res) => {
-  userApi.deleteUser(req.params.id).then(() => {
-    res.send(200)
+userRouter.delete('/:userId', (req,res) => {
+  userApi.deleteUser(req.params.userId).then(() => {
+    res.render('template/homePage')
   })
 })
 

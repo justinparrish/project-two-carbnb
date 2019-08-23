@@ -1,0 +1,24 @@
+<h1>Update User</h1>
+
+<form method="POST" action="/user/{{userId}}?_method=PUT">
+    <label for="name">Name</label>
+
+        <input type="text" name="name" placeholder="John Doe" value="{{oneUser.name}}" required> 
+
+    <label for="location">Location</label>
+
+        <input type="text" name="location" placeholder="Atlanta, Georgia" value="{{oneUser.location}}" required>
+
+    <label for="email">Email</label>
+
+        <input type="email" name="email" placeholder="johndoe@email.com" value="{{oneUser.email}}" required>
+
+    <input type="submit" value="Update User">
+
+</form>
+
+<form method="POST" action="/user/{{userId}}?_method=DELETE">
+
+    <input type="submit" value="Remove User" >
+
+</form>

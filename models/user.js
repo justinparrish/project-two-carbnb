@@ -31,16 +31,16 @@ const findUsers = () => {
 }
 
 
-const findUser = (userId) => {
-  return UserCollection.findById({_id: userId})
+const findUser = (id) => {
+  return UserCollection.findById(id)
 }
 
 const editUser = (userId, updatedInfo) => {
   return UserCollection.updateOne({_id: userId}, updatedInfo)
 }
 
-const deleteUser = (userId) => {
-  return UserCollection.findByIdAndDelete({_id: userId})
+const deleteUser = (id) => {
+  return UserCollection.findByIdAndDelete(id)
 }
 
 const deleteAllUsers = () => {
