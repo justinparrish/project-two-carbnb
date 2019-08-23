@@ -5,10 +5,10 @@ const userApi = require('./user')
 //     console.log(create)
 // })
 
-userApi.findUsers().then((allUsers) => {
-    console.log('ALL USERS')
-    console.log(allUsers)
-})
+// userApi.findUsers().then((allUsers) => {
+//     console.log('ALL USERS')
+//     console.log(allUsers)
+// })
 
 // userApi.findUser('5d5ea71ac308737d79c6d3cb').then((foundUser) => {
 //     console.log('FOUND USER')
@@ -20,7 +20,7 @@ userApi.findUsers().then((allUsers) => {
 //     console.log(nameEdit)
 // })
 
-// userApi.deleteUser('5d5ea9a10753237ef15ae937').then((deleted) => {
+// userApi.deleteUser('5d5eda6b00e27992ccbe512a').then((deleted) => {
 //     console.log('DELETE ITEM')
 //     console.log(deleted)
 // })
@@ -34,27 +34,27 @@ const carApi = require('./car')
 //     console.log(created)
 // })
 
-carApi.getCars().then((foundAllCars) => {
-    console.log('ALL CARS')
-    console.log(foundAllCars)
-})
-
-// carApi.getCar('5d5eb942ef73488639fad332').then((foundCar) => {
-//     console.log('FOUND CAR')
-//     console.log(foundCar)
+// carApi.getCars().then((foundAllCars) => {
+//     console.log('ALL CARS')
+//     console.log(foundAllCars)
 // })
 
-// carApi.editCar('5d5eb942ef73488639fad332', {name: 'Lynd',year: 1999, make: 'Isuzu', model: 'Trooper' }).then((editedCar) => {
-//     console.log('EDITED CARS')
-//     console.log(editedCar)
-// })
+// // carApi.getCar('5d5eb942ef73488639fad332').then((foundCar) => {
+// //     console.log('FOUND CAR')
+// //     console.log(foundCar)
+// // })
 
-// carApi.addCar({name: 'Justin', year: 2003, make: 'Chevy', model: 'Monte Carlo'}).then((addedCar) => {
-//     console.log('ADDED NEW CAR')
-//     console.log(addedCar)
-// })
+// // carApi.editCar('5d5eb942ef73488639fad332', {name: 'Lynd',year: 1999, make: 'Isuzu', model: 'Trooper' }).then((editedCar) => {
+// //     console.log('EDITED CARS')
+// //     console.log(editedCar)
+// // })
 
-// carApi.deleteCar('5d5eb942ef73488639fad332').then((deletedCar) => {
+// // carApi.addCar({name: 'Justin', year: 2003, make: 'Chevy', model: 'Monte Carlo'}).then((addedCar) => {
+// //     console.log('ADDED NEW CAR')
+// //     console.log(addedCar)
+// // })
+
+// carApi.deleteCar('5d5f1534d75e88a19ad729e8').then((deletedCar) => {
 //     console.log('DELETED CAR')
 //     console.log(deletedCar)
 // })

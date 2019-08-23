@@ -14,14 +14,14 @@ const CarSchema = new mongoose.Schema ({
 const CarCollection = mongoose.model('Car', CarSchema)
 
 
-const createCar = () => {
-  return CarCollection.create({
-    name: '',
-    year: 2000,
-    make: '',
-    model: ''
-  })
-}
+// const createCar = () => {
+//   return CarCollection.create({
+//     name: '',
+//     year: 2000,
+//     make: '',
+//     model: ''
+//   })
+// }
 
 const addCar = (newCar) => {
   return CarCollection.insertMany([newCar])
@@ -48,7 +48,7 @@ const deleteCar = (vinNum) => {
 
 module.exports = {
   addCar,
-  createCar,
+  // createCar,
   deleteCar,
   editCar,
   getCar,
