@@ -5,6 +5,9 @@ const carApi = require('../models/car.js')
 
 const carRouter = express.Router()
 
+carRouter.get('/carlisting', (req,res) => {
+  res.render('template/carListing')
+})
 
 carRouter.get('/:index', (req,res) => {
   carApi.getCar(req.params.index).then(() => {

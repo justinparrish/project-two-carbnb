@@ -7,6 +7,13 @@ const userApi = require('../models/user.js')
 
 const userRouter = express.Router()
 
+userRouter.get('/', (req,res) => {
+  res.render('template/homePage')
+})
+
+userRouter.get('/renteeadd', (req,res) => {
+  res.render('template/renteeAdd')
+})
 
 userRouter.get('/:index', (req,res) => {
   userApi.findUser(req.params.index).then(() => {
@@ -21,7 +28,7 @@ userRouter.get('/', (req,res) => {
 })
 
 userRouter.post('/', (req,res) => {
-  userApi.addUser().then(() => {
+  userApi.addUser(req.body).then(() => {
     res.send(200)
   })
 })
