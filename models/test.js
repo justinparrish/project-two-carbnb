@@ -5,10 +5,10 @@ const userApi = require('./user')
 //     console.log(create)
 // })
 
-// userApi.findUsers().then((allUsers) => {
-//     console.log('ALL USERS')
-//     console.log(allUsers)
-// })
+userApi.findUsers().then((allUsers) => {
+    console.log('ALL USERS')
+    console.log(allUsers)
+})
 
 // userApi.findUser('5d5ea71ac308737d79c6d3cb').then((foundUser) => {
 //     console.log('FOUND USER')
@@ -34,10 +34,10 @@ const carApi = require('./car')
 //     console.log(created)
 // })
 
-// carApi.getCars().then((foundAllCars) => {
-//     console.log('ALL CARS')
-//     console.log(foundAllCars)
-// })
+carApi.getCars().then((foundAllCars) => {
+    console.log('ALL CARS')
+    console.log(foundAllCars)
+})
 
 // // carApi.getCar('5d5eb942ef73488639fad332').then((foundCar) => {
 // //     console.log('FOUND CAR')

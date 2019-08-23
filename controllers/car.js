@@ -3,38 +3,48 @@ const express = require('express')
 
 const carApi = require('../models/car.js')
 
+const userRouter = express.Router()
 const carRouter = express.Router()
+
+
 
 carRouter.get('/carlisting', (req,res) => {
   res.render('template/carListing')
 })
 
-carRouter.get('/:index', (req,res) => {
-  carApi.getCar(req.params.index).then(() => {
+carRouter.get('/:id', (req,res) => {
+  carApi.getCar(req.params.id).then(() => {
     res.send(200)
   })
 })
 
+
 carRouter.get('/', (req,res) => {
-  carApi.getCars().then(() => {
-    res.send(200)
+  carApi.getCars().then((allCars) => {
+    res.render('template/carListing', {allCars})
   })
 })
 
 carRouter.post('/', (req,res) => {
-  carApi.addCar().then(() => {
+  carApi.addCar(req.body).then(() => {
+    res.render('template/carListing')
+  })
+})
+
+userRouter.post('/cars/carListing', (req,res) => {
+  userApi.addUser(req.body).then(() => {
+    res.render('template/carListing')
+  })
+})
+
+carRouter.put('/:id', (req,res) => {
+  carApi.editCar(req.params.id, req.body).then(() => {
     res.send(200)
   })
 })
 
-carRouter.put('/:index', (req,res) => {
-  carApi.editCar(req.params.index, req.body).then(() => {
-    res.send(200)
-  })
-})
-
-carRouter.delete('/:index', (req,res) => {
-  carApi.deleteCar(req.params.index).then(() => {
+carRouter.delete('/:id', (req,res) => {
+  carApi.deleteCar(req.params.id).then(() => {
     res.send(200)
   })
 })
@@ -45,5 +55,6 @@ carRouter.delete('/:index', (req,res) => {
 
 
 module.exports = {
-  carRouter
+  carRouter,
+  userRouter
 }

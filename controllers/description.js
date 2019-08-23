@@ -8,8 +8,8 @@ const descriptionApi = require('../models/description.js')
 const descriptionRouter = express.Router()
 
 
-descriptionRouter.get('/:index', (req,res) => {
-  descriptionApi.getDescription(req.params.index).then(() => {
+descriptionRouter.get('/:id', (req,res) => {
+  descriptionApi.getDescription(req.params.id).then(() => {
     res.send(200)
   })
 })
@@ -21,19 +21,19 @@ descriptionRouter.get('/', (req,res) => {
 })
 
 descriptionRouter.post('/', (req,res) => {
-  descriptionApi.addDescription().then(() => {
+  descriptionApi.addDescription(req.body).then(() => {
     res.send(200)
   })
 })
 
-descriptionRouter.put('/:index', (req,res) => {
-  descriptionApi.editDescription().then(() => {
+descriptionRouter.put('/:id', (req,res) => {
+  descriptionApi.editDescription(req.params.id, req.body).then(() => {
     res.send(200)
   })
 })
 
-descriptionRouter.delete('/:index', (req,res) => {
-  descriptionApi.deleteDescription().then(() => {
+descriptionRouter.delete('/:id', (req,res) => {
+  descriptionApi.deleteDescription(req.params.id).then(() => {
     res.send(200)
   })
 })

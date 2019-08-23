@@ -1,63 +1,20 @@
 <h1>Set Your Car Up For Rent</h1>
 
-<form method="POST" action="/user/cars/">
+<form method="POST" action="/user/cars/carListing/">
 {{!-- ----------------- user schema inputs------------------- --}}
 
     <label for="name">Name</label>
 
-        <input type="text" name="name" placeholder="John Doe" required> 
+        <input type="text" name="name" placeholder="John Doe" > 
 
     <label for="location">Location</label>
 
-        <input type="text" name="location" placeholder="Atlanta, Georgia" required>
+        <input type="text" name="location" placeholder="Atlanta, Georgia" >
 
     <label for="email">Email</label>
 
-        <input type="email" name="email" placeholder="johndoe@email.com" required>
+        <input type="email" name="email" placeholder="johndoe@email.com" >
 
-{{!-- ------------------ car schema inputs ------------------ --}}
-
-    <label for="Make">Make</label>
-
-        <input type="text" name="make" placeholder="Who made it?" required>
-
-    <label for="Model">Model</label>
-
-        <input type="text" name="model" placeholder="What's the model?" required>
-
-    <label for="Year">Year</label>
-
-        <input type="number" name="year" placeholder="What's the year?" maxlength="4" required>
-
-{{!-- --------------- description schema imputs --------------- --}}
-
-    <label for="Color">Color</label>
-
-        <input type="text" name="color" placeholder="What color is it?" required>
-
-    <label for="Comfort">Comfort</label>
-
-        <input type="text" name="comfort" placeholder="How comfortable is it" required>
-
-    <label for="Seats">Seats</label>
-
-        <input type="number" name="seats" placeholder="Whats the seat capacity?" required>
-
-    <label for="MPG">MPG</label>
-
-        <input type="number" name="mpg" placeholder="Whats the average mpg city/hwy?"required>
-
-    <label for="Child Friendly">Child Friendly</label>
-
-        <input type="checkbox" name="child friendly" placeholder="Can children fit?" >
-
-    <label for="Accidents">Accidents</label>
-
-        <input type="checkbox" name="accidents" placeholder="Have it ever been wrecked?" >
-
-    <label for="Smoking Allowed?">Smoking Allowed</label>
-    
-        <input type="checkbox" name="smoking allowed?" placeholder="Can renter smoke in it?" >
 
 <input type="submit" value="Up for rent!">
 

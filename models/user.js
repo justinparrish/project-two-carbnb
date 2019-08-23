@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema({
  
 })
 
-const UserCollection = mongoose.model('User', UserSchema)
+const UserCollection = mongoose.model('user', UserSchema)
  
 
 
