@@ -25,6 +25,11 @@ userApi.findUsers().then((allUsers) => {
 //     console.log(deleted)
 // })
 
+userApi.deleteAllUsers().then((all) => {
+    console.log('ALL DELETED')
+    console.log(all)
+})
+
 
 
 const carApi = require('./car')

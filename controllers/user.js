@@ -17,10 +17,11 @@ userRouter.get('/', (req,res) => {
 userRouter.get('/renteeadd', (req,res) => {
   res.render('template/renteeAdd', {})
 })
-
+//user/cars/carsListing
 //to list users in carListing
 userRouter.get('/cars/carsListing', (req,res) => {
   userApi.findUsers().then((allUsers) => {
+    console.log(allUsers)
     res.render('template/carListing', {allUsers})
   })
 })

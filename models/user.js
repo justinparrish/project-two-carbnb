@@ -43,6 +43,11 @@ const deleteUser = (userId) => {
   return UserCollection.findByIdAndDelete({_id: userId})
 }
 
+const deleteAllUsers = () => {
+  return UserCollection.deleteMany()
+}
+
+
 // const linkToCar = () => {
 
 // }
@@ -50,6 +55,7 @@ const deleteUser = (userId) => {
 module.exports = {
   addUser,
   createUser,
+  deleteAllUsers,
   deleteUser,
   editUser,
   findUser,
