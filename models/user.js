@@ -48,9 +48,7 @@ const deleteAllUsers = () => {
 }
 
 
-// const linkToCar = () => {
 
-// }
 
 module.exports = {
   addUser,
@@ -60,5 +58,5 @@ module.exports = {
   editUser,
   findUser,
   findUsers
-  // linkToCar
+ 
 }
