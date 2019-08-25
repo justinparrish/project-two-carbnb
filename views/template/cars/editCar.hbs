@@ -1,0 +1,24 @@
+<h1>Edit Your Car</h1>
+
+<form method="POST" action="/user/cars/carListing/{{vinNum}}?_method=PUT">
+    <label for="Make">Make</label>
+
+        <input type="text" name="make" placeholder="Who made it?" value="{{oneCar.make}}" required>
+
+    <label for="Model">Model</label>
+
+        <input type="text" name="model" placeholder="What's the model?" value="{{oneCar.model}}" required>
+
+    <label for="Year">Year</label>
+
+        <input type="number" name="year" placeholder="What's the year?" maxlength="4" value="{{oneCar.year}}" required>
+
+    <input type="submit" value="Add car">
+
+</form>
+
+<form method="POST" action="/user/cars/{{vinNum}}?_method=DELETE">
+
+    <input type="submit" value="Remove Car">
+
+</form>
