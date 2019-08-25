@@ -1,6 +1,6 @@
 // //UNCOMMENT ALL TO DELETEAL FROM EVERY MODEL
 
-// const userApi = require('./user')
+const userApi = require('./user')
 
 // // userApi.createUser().then((create) => {
 // //     console.log('CREATED USER')
@@ -27,14 +27,14 @@
 // //     console.log(deleted)
 // // })
 
-// userApi.deleteAllUsers().then((all) => {
-//     console.log('ALL USERS DELETED')
-//     console.log(all)
-// })
+userApi.deleteAllUsers().then((all) => {
+    console.log('ALL USERS DELETED')
+    console.log(all)
+})
 
 
 
-// const carApi = require('./car')
+const carApi = require('./car')
 
 // // carApi.createCar().then((created) => {
 // //     console.log('CREATED CAR')
@@ -66,14 +66,14 @@
 // //     console.log(deletedCar)
 // // })
 
-// carApi.deleteAllCars().then((deletedAll) => {
-//     console.log('ALL CARS DELETE')
-//     console.log(deletedAll)
-// })
+carApi.deleteAllCars().then((deletedAll) => {
+    console.log('ALL CARS DELETE')
+    console.log(deletedAll)
+})
 
 
 
-// const descriptionApi = require('./description')
+const descriptionApi = require('./description')
 
 // // descriptionApi.createDescription().then((createdDescript) => {
 // //     console.log('CREATED DESCRIPTION')
@@ -106,7 +106,7 @@
 // //     console.log(deleted)
 // // })
 
-// descriptionApi.deleteAllDescript().then((deleteAllD) => {
-//     console.log('DELETED DESCRIPTIONS')
-//     console.log(deleteAllD)
-// })
+descriptionApi.deleteAllDescript().then((deleteAllD) => {
+    console.log('DELETED DESCRIPTIONS')
+    console.log(deleteAllD)
+})

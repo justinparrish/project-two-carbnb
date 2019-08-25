@@ -5,7 +5,7 @@ const userApi = require('../models/user.js')
 const userRouter = express.Router()
 
 
-
+//user/cars/carsListing
 
 
 //to load home page
@@ -15,35 +15,36 @@ userRouter.get('/', (req,res) => {
 
 // //to load rentee button link
 userRouter.get('/renteeadd', (req,res) => {
-  res.render('template/renteeAdd', {})
+  res.render('template/users/renteeAdd', {})
 })
-//user/cars/carsListing
+
 //to list users in carListing
-userRouter.get('/cars/carsListing', (req,res) => {
+userRouter.get('/cars/userListing', (req,res) => {
   userApi.findUsers().then((allUsers) => {
+    console.log('USER')
     console.log(allUsers)
-    res.render('template/carListing', {allUsers})
+    res.render('template/cars/userListing', {allUsers})
   })
 })
 
 //to find a use to edit
 userRouter.get('/:userId', (req,res) => {
   userApi.findUser(req.params.userId).then(oneUser => {
-    res.render('template/editUser', {oneUser ,userId :req.params.userId})
+    res.render('template/users/editUser', {oneUser ,userId :req.params.userId})
   })
 })
 
 //to add a user to carListing page
-userRouter.post('/cars/carsListing', (req,res) => {
+userRouter.post('/cars/userListing', (req,res) => {
   userApi.addUser(req.body).then(() => {
-    res.render('template/carListing')
+    res.render('template/cars/userListing')
   })
 })
 
 //to update a user
 userRouter.put('/:userId', (req,res) => {
   userApi.editUser(req.params.userId, req.body).then(() => {
-    res.render('template/carListing')
+    res.render('template/cars/userListing')
   })
 })
 

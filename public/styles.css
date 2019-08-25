@@ -12,7 +12,8 @@ body, html {
     font-size: 50px;
 }
 
-#rentee, #renter {
+#addyours, #listedyou {
+    color: black;
     border: 1px solid black;
     padding: 3px 12px 3px 12px;
     text-decoration: none;
@@ -24,4 +25,24 @@ a {
     font-size: 20px;
     text-decoration: none;
     
+}
+
+li {
+    margin: 15px 0 30px 0;
+    border-bottom: .5px solid rgba(0, 0, 0, 0.459);
+    list-style: none;
+
+}
+
+#name {
+    color: black;
+}
+
+#name:hover {
+    color: blanchedalmond;
+}
+
+#addyours:hover, #listedyou:hover {
+    color: blanchedalmond;
+    background-color: black;
 }

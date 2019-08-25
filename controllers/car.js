@@ -3,7 +3,7 @@ const express = require('express')
 
 const carApi = require('../models/car.js')
 
-
+const userRouter = express.Router()
 const carRouter = express.Router()
 
 
@@ -15,12 +15,15 @@ const carRouter = express.Router()
 
 
 
+carRouter.get('/renteecar', (req,res) => {
+  res.render('template/cars/addCar', {})
+})
 
-
-carRouter.get('/carsListing', (req,res) => {
+carRouter.get('/userListing', (req,res) => {
   carApi.getCars().then((allCars) => {
+    console.log('CARS')
     console.log(allCars)
-    res.render('template/carListing', {allCars})
+    res.render('template/cars/userListing', {allCars})
   })
 })
 
@@ -28,21 +31,21 @@ carRouter.get('/carsListing', (req,res) => {
 //to get car 
 carRouter.get('/:vinNum', (req,res) => {
   carApi.getCar(req.params.vinNum).then(oneCar => {
-    res.render('template/editCar', {oneCar, vinNum: req.params.vinNum})
+    res.render('template/cars/editCar', {oneCar, vinNum: req.params.vinNum})
   })
 })
 
 
-carRouter.post('/carsListing', (req,res) => {
+userRouter.post('/carsListing', (req,res) => {
   carApi.addCar(req.body).then(() => {
-    res.render('template/carListing')
+    res.render('template/cars/userListing')
   })
 })
 
 
 carRouter.put('/:vinNum', (req,res) => {
   carApi.editCar(req.params.vinNum, req.body).then(() => {
-    res.render('/template/carListing')
+    res.render('/template/cars/userListing')
   })
 })
 
@@ -58,5 +61,6 @@ carRouter.delete('/:vinNum', (req,res) => {
 
 
 module.exports = {
-  carRouter
+  carRouter,
+  userRouter
 }
