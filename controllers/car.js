@@ -15,15 +15,15 @@ const carRouter = express.Router()
 
 
 
-carRouter.get('/renteecar', (req,res) => {
+carRouter.get('/addcar', (req,res) => {
   res.render('template/cars/addCar', {})
 })
 
-carRouter.get('/userListing', (req,res) => {
+carRouter.get('/carListing', (req,res) => {
   carApi.getCars().then((allCars) => {
     console.log('CARS')
     console.log(allCars)
-    res.render('template/cars/userListing', {allCars})
+    res.render('template/cars/carListing', {allCars})
   })
 })
 
@@ -36,16 +36,16 @@ carRouter.get('/:vinNum', (req,res) => {
 })
 
 
-userRouter.post('/carsListing', (req,res) => {
+carRouter.post('/carListing', (req,res) => {
   carApi.addCar(req.body).then(() => {
-    res.render('template/cars/userListing')
+    res.render('template/cars/carListing')
   })
 })
 
 
 carRouter.put('/:vinNum', (req,res) => {
   carApi.editCar(req.params.vinNum, req.body).then(() => {
-    res.render('/template/cars/userListing')
+    res.render('/template/cars/carListing')
   })
 })
 
