@@ -1,0 +1,17 @@
+<h1>Add Your Car</h1>
+
+<form method="POST" action="/user/cars/carsListing/">
+    <label for="Make">Make</label>
+
+        <input type="text" name="make" placeholder="Who made it?" required>
+
+    <label for="Model">Model</label>
+
+        <input type="text" name="model" placeholder="What's the model?" required>
+
+    <label for="Year">Year</label>
+
+        <input type="number" name="year" placeholder="What's the year?" maxlength="4" required>
+
+    <input type="submit" value="Add car">
+</form>

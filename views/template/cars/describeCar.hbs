@@ -1,0 +1,26 @@
+<h1>Describe Your Car</h1>
+
+<form method="POST" action="/user/cars/">
+    <label for="Color">Color</label>
+        <input type="text" name="color" placeholder="What color is it?" required>
+
+    <label for="Comfort">Comfort</label>
+        <input type="text" name="comfort" placeholder="How comfortable is it" required>
+
+    <label for="Seats">Seats</label>
+        <input type="number" name="seats" placeholder="Whats the seat capacity?" required>
+
+    <label for="MPG">MPG</label>
+        <input type="number" name="mpg" placeholder="Whats the average mpg city/hwy?"required>
+
+    <label for="Child Friendly">Child Friendly</label>
+        <input type="checkbox" name="child friendly" placeholder="Can children fit?" >
+
+    <label for="Accidents">Accidents</label>
+        <input type="checkbox" name="accidents" placeholder="Have it ever been wrecked?" >
+
+    <label for="Smoking Allowed?">Smoking Allowed</label>
+        <input type="checkbox" name="smoking allowed?" placeholder="Can renter smoke in it?" >
+
+<input type="submit" value="Up for rent!">
+</form>

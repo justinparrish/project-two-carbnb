@@ -1,0 +1,15 @@
+<h1 id="choose-car">Welcome To The Database Club</h1>
+<a href="/user/">Home</a>
+
+<a href="/user/cars/userListing/">Refresh If Broke</a>
+
+<ul>
+    {{#each allUsers}}
+    <li>
+        <a href="/user/{{_id}}" id="name">{{name}}</a>
+        <p style="margin: 4px 0 4px 0;">{{location}}</p>
+        <p style="margin: 4px 0 4px 0; "><a href="malito:{{email}}" style="font-size: 17px;">{{email}}</a></p>
+       
+    </li>
+    {{/each}}
+</ul>
