@@ -32,20 +32,20 @@ const addDescription = (newDescription) => {
   return DescriptionCollection.insertMany( [newDescription] )
 }
 
-const getDescription = (descriptionId) => {
-  return DescriptionCollection.findById({_id: descriptionId})
+const getDescription = (id) => {
+  return DescriptionCollection.findById(id)
 }
 
 const getDescriptions = () => {
   return DescriptionCollection.find()
 }
 
-const editDescription = (descriptionId, updatedDescription) => {
-  return DescriptionCollection.updateOne({_id: descriptionId}, updatedDescription)
+const editDescription = (descriptId, updatedDescript => {
+  return DescriptionCollection.updateOne({_id: descriptId}, updatedDescript)
 }
 
-const deleteDescription = (descriptionId) => {
-  return DescriptionCollection.findByIdAndDelete({_id: descriptionId})
+const deleteDescription = (id) => {
+  return DescriptionCollection.findByIdAndDelete(id)
 }
 
 const deleteAllDescript = () => {
