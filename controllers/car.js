@@ -36,7 +36,7 @@ carRouter.get('/:vinNum', (req,res) => {
 })
 
 
-carRouter.post('/carListing', (req,res) => {
+carRouter.post('/carListing/', (req,res) => {
   carApi.addCar(req.body).then(() => {
     res.render('template/cars/carListing')
   })
