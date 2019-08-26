@@ -1,8 +1,32 @@
-body, html {
+body {
+    display: flex;
     background-color: #AAF5FB;
     text-align: center;
     font-family: cursive;
+
 }
+
+#home-page {
+    
+    
+}
+
+.home-header {
+
+}
+
+.home-user-button {
+
+}
+
+.home-car-button {
+
+}
+
+.home-descript-button {
+
+}
+
 
 #choose-car {
     font-size: 50px;
@@ -39,9 +63,9 @@ li {
     color: black;
 }
 
-#car-list-item{
+/* #car-list-item{
     
-}
+} */
 
 #name:hover {
     color: blanchedalmond;
