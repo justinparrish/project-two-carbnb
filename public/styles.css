@@ -6,11 +6,6 @@ body {
 
 }
 
-/* .home-page {
-
-   
-    
-} */
 
 .home-header, .home-user-button, .home-car-button, .home-descript-button {
     display: flex;

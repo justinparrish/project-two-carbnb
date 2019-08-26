@@ -14,8 +14,8 @@ userRouter.get('/', (req,res) => {
 })
 
 // //to load rentee button link
-userRouter.get('/renteeadd', (req,res) => {
-  res.render('template/users/renteeAdd', {})
+userRouter.get('/useradd', (req,res) => {
+  res.render('template/users/useradd', {})
 })
 
 //to list users in carListing
