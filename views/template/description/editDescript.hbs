@@ -7,7 +7,7 @@
 
     <label for="Comfort">Comfort</label>
 
-        <input type="text" name="comfort" placeholder="How comfortable is it" value="{{oneD.comfort}}">
+        <input type="text" name="comfort" placeholder="Rate 1-10" value="{{oneD.comfort}}">
 
     <label for="Seats">Seats</label>
 
@@ -19,20 +19,22 @@
 
     <label for="Child Friendly">Child Friendly</label>
 
-        <input type="text" name="childFriendly" placeholder="Y or N" value="{{oneD.childFriendly}}">
+        <input type="text" name="childFriendly" placeholder="yes or no" value="{{oneD.childFriendly}}">
 
     <label for="Accidents">Accidents</label>
 
-        <input type="text" name="accident" placeholder="Y or N" value="{{oneD.accident}}">
+        <input type="text" name="accident" placeholder="has or has not" value="{{oneD.accident}}">
 
     <label for="Smoking Allowed?">Smoking Allowed</label>
     
-        <input type="text" name="smoker" placeholder="Y or N" value="{{oneD.smoker}}">
+        <input type="text" name="smoker" placeholder="are availabe or are not availabe" value="{{oneD.smoker}}">
+
+    <input type="submit" value="Update Description" class="homeLink">
 
 </form>
 
 <form method="POST" action="/user/cars/description/{{descriptId}}?_method=DELETE">
 
-    <input type="Submit" value="Remove Description">
+    <input type="Submit" value="Remove Description" class="homeLink">
 
 </form>

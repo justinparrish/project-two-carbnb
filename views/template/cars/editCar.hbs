@@ -1,6 +1,6 @@
 <h1>Edit Your Car</h1>
 
-<form method="POST" action="/user/cars/carListing/{{vinNum}}?_method=PUT">
+<form method="POST" action="/user/cars/{{vinNum}}?_method=PUT">
     <label for="Make">Make</label>
 
         <input type="text" name="make" placeholder="Who made it?" value="{{oneCar.make}}" required>
@@ -13,12 +13,12 @@
 
         <input type="number" name="year" placeholder="What's the year?" maxlength="4" value="{{oneCar.year}}" required>
 
-    <input type="submit" value="Add car">
+    <input type="submit" value="Update Car" class="homeLink">
 
 </form>
 
 <form method="POST" action="/user/cars/{{vinNum}}?_method=DELETE">
 
-    <input type="submit" value="Remove Car">
+    <input type="submit" value="Remove Car" class="homeLink">
 
 </form>

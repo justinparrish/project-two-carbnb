@@ -1,12 +1,12 @@
 <h1 id="choose-car">Look at All of These Parade Cars</h1>
-<a href="/user/">Home</a>
+<a href="/user/" class="homeLink">Home</a>
 
-<a href="/user/cars/carListing/">Refresh If Broke</a>
+<a href="/user/cars/carListing/" class="homeLink">Refresh If Broke</a>
 
 <ul>
     {{#each allCars}}
-    <li>
-        <a href="/user/cars/{{_id}}" id="car">{{year}} {{make}} {{model}}</a>
+    <li id="car-list-item">
+        <a href="/user/cars/{{_id}}" >{{year}} {{make}} {{model}}</a>
     </li>
     {{/each}}
 </ul>

@@ -12,8 +12,9 @@ body, html {
     font-size: 50px;
 }
 
-.homelink {
+.homeLink {
     color: black;
+    background-color: white;
     border: 1px solid black;
     padding: 3px 12px 3px 12px;
     text-decoration: none;
@@ -38,11 +39,15 @@ li {
     color: black;
 }
 
+#car-list-item{
+    
+}
+
 #name:hover {
     color: blanchedalmond;
 }
 
-.homelink:hover {
+.homeLink:hover {
     color: blanchedalmond;
     background-color: black;
 }

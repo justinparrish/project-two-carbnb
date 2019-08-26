@@ -1,12 +1,16 @@
 <h1>Search For the Ideal Fit</h1>
-<a href="/user/">Home</a>
+<a href="/user/" class="homeLink">Home</a>
 
-<a href="/user/cars/description/search/">Refresh If Broke</a>
+<a href="/user/cars/description/search/" class="homeLink">Refresh If Broke</a>
 
 <ul>
     {{#each allDescripts}}
     <li>
-        {{color}}
+        <p>This car is a nice {{color}} color, with a bizzare comfort of a {{comfort}} out of 10 for any driver or passenger.
+            You can fit up to {{seats}} people inside. With adults, {{childFriendly}} this vehicle is child friendly.
+            With an average of {{mpg}} MPG, this vehicle {{accident}} been in any accidents. Last but not least, you
+            {{smoker}} to smoke any products in side of here.
+        </p>
         <a href="/user/cars/description/{{_id}}">Edit</a>
     </li>
     {{/each}}
