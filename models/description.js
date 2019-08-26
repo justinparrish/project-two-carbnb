@@ -40,7 +40,7 @@ const getDescriptions = () => {
   return DescriptionCollection.find()
 }
 
-const editDescription = (descriptId, updatedDescript => {
+const editDescription = (descriptId, updatedDescript) => {
   return DescriptionCollection.updateOne({_id: descriptId}, updatedDescript)
 }
 

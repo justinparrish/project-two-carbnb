@@ -8,33 +8,40 @@ const descriptionApi = require('../models/description.js')
 const descriptionRouter = express.Router()
 
 
-descriptionRouter.get('/:id', (req,res) => {
-  descriptionApi.getDescription(req.params.id).then(() => {
-    res.send(200)
+descriptionRouter.get('/addDescript', (req,res) => {
+  res.render('template/description/addDescript')
+})
+
+
+descriptionRouter.get('/:descriptId', (req,res) => {
+  descriptionApi.getDescription(req.params.descriptId).then(oneD => {
+    res.render('/template/description/editeDescript', {oneD, descriptId: req.params.descriptId})
   })
 })
 
-descriptionRouter.get('/', (req,res) => {
-  descriptionApi.getDescriptions().then(() => {
-    res.send(200)
+descriptionRouter.get('/search', (req,res) => {
+  descriptionApi.getDescriptions().then((allDescripts) => {
+    console.log('DESCRIPTIONS')
+    console.log(allDescripts)
+    res.render('template/description/descriptSearch', {allDescripts})
   })
 })
 
-descriptionRouter.post('/', (req,res) => {
+descriptionRouter.post('/search', (req,res) => {
   descriptionApi.addDescription(req.body).then(() => {
-    res.send(200)
+    res.render('template/description/descriptSearch')
   })
 })
 
-descriptionRouter.put('/:id', (req,res) => {
-  descriptionApi.editDescription(req.params.id, req.body).then(() => {
-    res.send(200)
+descriptionRouter.put('/:descriptId', (req,res) => {
+  descriptionApi.editDescription(req.params.descriptId, req.body).then(() => {
+    res.render('template/description/descriptSearch')
   })
 })
 
-descriptionRouter.delete('/:id', (req,res) => {
-  descriptionApi.deleteDescription(req.params.id).then(() => {
-    res.send(200)
+descriptionRouter.delete('/:descriptId', (req,res) => {
+  descriptionApi.deleteDescription(req.params.descriptId).then(() => {
+    res.render('template/homePage')
   })
 })
 
