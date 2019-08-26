@@ -142,15 +142,34 @@ li {
     border-bottom: .5px solid rgba(0, 0, 0, 0.459);
 }
 
-#name {
+.car-listing {
+    border-bottom: .5px solid rgba(0, 0, 0, 0.459);
+}
+
+.descript-list {
+    border-bottom: .5px solid rgba(0, 0, 0, 0.459);
+}
+
+#d-paragraph {
+    font-size: 25px;
+}
+
+#d-paragraph:hover {
+    background-color: rgba(0, 0, 0, 0.705);
+    border: 1px solid black;
+    border-radius: 6px;
+    color: antiquewhite;
+}
+
+#name, #car-name {
     color: black;
 }
 
-/* #car-list-item{
-    
-} */
+#car-name {
+    font-size: 30px;
+}
 
-#name:hover {
+#name:hover, #car-name:hover {
     color: blanchedalmond;
 }
 

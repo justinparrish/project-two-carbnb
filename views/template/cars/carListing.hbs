@@ -5,8 +5,9 @@
 
 <ul>
     {{#each allCars}}
-    <li id="car-list-item">
-        <a href="/user/cars/{{_id}}" >{{year}} {{make}} {{model}}</a>
+    <li class="car-listing">
+        <p id="car-name">{{year}} {{make}} {{model}}</p>
+        <a href="/user/cars/{{_id}}">Edit</a>
     </li>
     {{/each}}
 </ul>
