@@ -43,7 +43,7 @@ descriptionRouter.put('/:descriptId', (req,res) => {
 
 descriptionRouter.delete('/:descriptId', (req,res) => {
   descriptionApi.deleteDescription(req.params.descriptId).then(() => {
-    res.render('template/homePage')
+    res.render('template/description/descriptSearch')
   })
 })
 

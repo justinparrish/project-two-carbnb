@@ -51,7 +51,7 @@ userRouter.put('/:userId', (req,res) => {
 //to delete a user
 userRouter.delete('/:userId', (req,res) => {
   userApi.deleteUser(req.params.userId).then(() => {
-    res.render('template/homePage')
+    res.render('template/users/userListing')
   })
 })
 

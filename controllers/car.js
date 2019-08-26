@@ -44,7 +44,7 @@ carRouter.put('/:vinNum', (req,res) => {
 
 carRouter.delete('/:vinNum', (req,res) => {
   carApi.deleteCar(req.params.vinNum).then(() => {
-    res.render('template/homePage')
+    res.render('template/cars/carListing')
   })
 })
 
