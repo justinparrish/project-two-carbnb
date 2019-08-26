@@ -1,23 +1,27 @@
 <h1>Add Yourself to the Parade</h1>
 
 <form method="POST" action="/user/cars/userListing/">
-{{!-- ----------------- user schema inputs------------------- --}}
+    {{!-- ----------------- user schema inputs------------------- --}}
+    <ul class="add-user">
+        <li class="user-row">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="John Doe"  required>
+        </li>
 
-    <label for="name">Name</label>
+        <li class="user-row">
+            <label for="location">Location</label>
+            <input type="text" name="location" placeholder="Atlanta, Georgia" required>
+        </li>
 
-        <input type="text" name="name" placeholder="John Doe" > 
-
-    <label for="location">Location</label>
-
-        <input type="text" name="location" placeholder="Atlanta, Georgia" >
-
-    <label for="email">Email</label>
-
-        <input type="email" name="email" placeholder="johndoe@email.com" >
+        <li class="user-row">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="johndoe@email.com"  required>
+        </li>
 
 
-<input type="submit" value="Up for rent!" class="homeLink">
+        <a href="/user/" class="homeLink">Back</a>
 
+        <input type="submit" value="Up for rent!" class="homeLink">
+    </ul>
 </form>
 
-<a href="/user/" class="homeLink">Back</a>

@@ -1,7 +1,8 @@
 body {
     background-color: #AAF5FB;
     text-align: center;
-    font-family: cursive;
+    font-family: 'Titillium Web', sans-serif;
+
 
 }
 
@@ -11,27 +12,43 @@ body {
     
 } */
 
-.home-header {
+.home-header, .home-user-button, .home-car-button, .home-descript-button {
     display: flex;
     justify-content: center;
+    align-items: center;
+    
 }
 
-.home-user-button {
+.add-user {
+  background-color: rgba(14, 14, 14, 0.644);
+    border-radius: 9px;
+    border: 3px solid black;
+}
+
+.user-row{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: .34em;
+    
 }
 
-.home-car-button {
-    display: flex;
-    justify-content: center;
-
+.user-row > input {
+    flex: 2;
 }
 
-.home-descript-button {
-    display: flex;
-    justify-content: center;
 
+
+
+.user-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
 }
+
+
+
+ h1 {
+    font-family: 'Bangers' ,cursive;
+ }
 
 
 #choose-car {
@@ -43,12 +60,13 @@ body {
 }
 
 .homeLink {
+    font-family: 'Bangers' ,cursive;
     color: black;
     background-color: white;
     border: 1px solid black;
     padding: 3px 12px 3px 12px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
   
 }
 
@@ -60,9 +78,12 @@ a {
 
 li {
     margin: 15px 0 30px 0;
-    border-bottom: .5px solid rgba(0, 0, 0, 0.459);
     list-style: none;
 
+}
+
+.user-listing{
+    border-bottom: .5px solid rgba(0, 0, 0, 0.459);
 }
 
 #name {
