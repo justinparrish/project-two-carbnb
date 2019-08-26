@@ -8,13 +8,6 @@ const carRouter = express.Router()
 
 
 
-// carRouter.get('/carlisting', (req,res) => {
-//   res.render('template/carListing')
-// })
-
-
-
-
 carRouter.get('/addcar', (req,res) => {
   res.render('template/cars/addCar', {})
 })
