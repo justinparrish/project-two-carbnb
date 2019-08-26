@@ -1,4 +1,4 @@
-<form method="POST" action="/user/cars/description/search/{{descriptId}}?_method=PUT">
+<form method="POST" action="/user/cars/description/{{descriptId}}?_method=PUT">
     {{!-- --------------- description schema imputs --------------- --}}
 
     <label for="Color">Color</label>
@@ -19,19 +19,19 @@
 
     <label for="Child Friendly">Child Friendly</label>
 
-        <input type="checkbox" name="childFriendly" placeholder="Can children fit?" value="{{oneD.childFriendly}}">
+        <input type="text" name="childFriendly" placeholder="Y or N" value="{{oneD.childFriendly}}">
 
     <label for="Accidents">Accidents</label>
 
-        <input type="checkbox" name="accident" placeholder="Have it ever been wrecked?" value="{{oneD.accident}}">
+        <input type="text" name="accident" placeholder="Y or N" value="{{oneD.accident}}">
 
     <label for="Smoking Allowed?">Smoking Allowed</label>
     
-        <input type="checkbox" name="smoker" placeholder="Can renter smoke in it?" value="{{oneD.smoker}}">
+        <input type="text" name="smoker" placeholder="Y or N" value="{{oneD.smoker}}">
 
 </form>
 
-<form method="POST" action="/user/cars/description/search/{{descriptId}}?_method=DELETE">
+<form method="POST" action="/user/cars/description/{{descriptId}}?_method=DELETE">
 
     <input type="Submit" value="Remove Description">
 
