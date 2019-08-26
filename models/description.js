@@ -8,9 +8,9 @@ const DescriptionSchema = new mongoose.Schema({
   comfort: String,
   seats: Number,
   mpg: Number,
-  childFriendly: Boolean,
-  accident: Boolean,
-  smoker: Boolean
+  childFriendly: String,
+  accident: String,
+  smoker: String
 
 })
 
