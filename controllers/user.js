@@ -19,7 +19,7 @@ userRouter.get('/useradd', (req,res) => {
 })
 
 //to list users in carListing
-userRouter.get('/cars/userListing', (req,res) => {
+userRouter.get('/userListing', (req,res) => {
   userApi.findUsers().then((allUsers) => {
     console.log('USER')
     console.log(allUsers)
@@ -35,7 +35,7 @@ userRouter.get('/:userId', (req,res) => {
 })
 
 //to add a user to carListing page
-userRouter.post('/cars/userListing', (req,res) => {
+userRouter.post('/userListing', (req,res) => {
   userApi.addUser(req.body).then(() => {
     res.render('template/users/userListing')
   })

@@ -1,35 +1,44 @@
 <form method="POST" action="/user/cars/description/{{descriptId}}?_method=PUT">
     {{!-- --------------- description schema imputs --------------- --}}
+    <ul class="add-descript">
+        <li class="descript-row">
+            <label for="Color">Color</label>
+            <input type="text" name="color" placeholder="What color is it?" value="{{oneD.color}}" required>
+        </li>
 
-    <label for="Color">Color</label>
+        <li class="descript-row">
+            <label for="Comfort">Comfort</label>
+            <input type="text" name="comfort" placeholder="Rate 1-10" value="{{oneD.comfort}}" required>
+        </li>
 
-        <input type="text" name="color" placeholder="What color is it?" value="{{oneD.color}}">
+        <li class="descript-row">
+            <label for="Seats">Seats</label>
+            <input type="number" name="seats" placeholder="Whats the seat capacity?" value="{{oneD.seats}}" required>
+        </li>
 
-    <label for="Comfort">Comfort</label>
+        <li class="descript-row">
+            <label for="MPG">MPG</label>
+            <input type="number" name="mpg" placeholder="Whats the average mpg city/hwy?" value="{{oneD.mpg}}" required>
+        </li>
 
-        <input type="text" name="comfort" placeholder="Rate 1-10" value="{{oneD.comfort}}">
+        <li class="descript-row">
+            <label for="Child Friendly">Child Friendly</label>
+            <input type="text" name="childFriendly" placeholder="yes or no" value="{{oneD.childFriendly}}" required>
+        </li>
 
-    <label for="Seats">Seats</label>
+        <li class="descript-row">
+            <label for="Accidents">Accidents</label>
+            <input type="text" name="accident" placeholder="has or has not" value="{{oneD.accident}}" required>
+        </li>
 
-        <input type="number" name="seats" placeholder="Whats the seat capacity?" value="{{oneD.seats}}">
+        <li class="descript-row">
+            <label for="Smoking Allowed?">Smoking Allowed</label>
+            <input type="text" name="smoker" placeholder="are availabe or are not availabe" value="{{oneD.smoker}}" required>
+        </li>
 
-    <label for="MPG">MPG</label>
-
-        <input type="number" name="mpg" placeholder="Whats the average mpg city/hwy?" value="{{oneD.mpg}}">
-
-    <label for="Child Friendly">Child Friendly</label>
-
-        <input type="text" name="childFriendly" placeholder="yes or no" value="{{oneD.childFriendly}}">
-
-    <label for="Accidents">Accidents</label>
-
-        <input type="text" name="accident" placeholder="has or has not" value="{{oneD.accident}}">
-
-    <label for="Smoking Allowed?">Smoking Allowed</label>
-    
-        <input type="text" name="smoker" placeholder="are availabe or are not availabe" value="{{oneD.smoker}}">
-
-    <input type="submit" value="Update Description" class="homeLink">
+        <a href="/user/cars/description/search" class="homeLink">Back</a>
+        <input type="submit" value="Update Description!" class="homeLink">
+    </ul>
 
 </form>
 

@@ -1,19 +1,25 @@
 <h1>Update User</h1>
 
 <form method="POST" action="/user/{{userId}}?_method=PUT">
-    <label for="name">Name</label>
+    <ul class="add-user">
+        <li class="user-row">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="John Doe" value="{{oneUser.name}}" required>
+        </li>
 
-        <input type="text" name="name" placeholder="John Doe" value="{{oneUser.name}}" required> 
+        <li class="user-row">
+            <label for="location">Location</label>
+            <input type="text" name="location" placeholder="Atlanta, Georgia" value="{{oneUser.location}}" required>
+        </li>
 
-    <label for="location">Location</label>
+        <li class="user-row">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="johndoe@email.com" value="{{oneUser.email}}" required>
+        </li>
 
-        <input type="text" name="location" placeholder="Atlanta, Georgia" value="{{oneUser.location}}" required>
-
-    <label for="email">Email</label>
-
-        <input type="email" name="email" placeholder="johndoe@email.com" value="{{oneUser.email}}" required>
-
-    <input type="submit" value="Update User" class="homeLink">
+         <a href="/user/userlisting" class="homeLink">Back</a>
+        <input type="submit" value="Update User!" class="homeLink">
+    </ul>
 
 </form>
 
