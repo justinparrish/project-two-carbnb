@@ -1,36 +1,45 @@
+<h1>Describe a Vehicle</h1>
+
 <form method="POST" action="/user/cars/description/search">
     {{!-- --------------- description schema imputs --------------- --}}
+    <ul class="add-descript">
+        <li class="descript-row">
+            <label for="Color">Color</label>
+            <input type="text" name="color" placeholder="What color is it?">
+        </li>
 
-    <label for="Color">Color</label>
+        <li class="descript-row">
+            <label for="Comfort">Comfort</label>
+            <input type="text" name="comfort" placeholder="Rate 1-10">
+        </li>
 
-        <input type="text" name="color" placeholder="What color is it?" >
+        <li class="descript-row">
+            <label for="Seats">Seats</label>
+            <input type="number" name="seats" placeholder="Whats the seat capacity?">
+        </li>
 
-    <label for="Comfort">Comfort</label>
+        <li class="descript-row">
+            <label for="MPG">MPG</label>
+            <input type="number" name="mpg" placeholder="Whats the average mpg city/hwy?">
+        </li>
 
-        <input type="text" name="comfort" placeholder="Rate 1-10" >
+        <li class="descript-row">
+            <label for="Child Friendly">Child Friendly</label>
+            <input type="text" name="childFriendly" placeholder="yes or no">
+        </li>
 
-    <label for="Seats">Seats</label>
+        <li class="descript-row">
+            <label for="Accidents">Accidents</label>
+            <input type="text" name="accident" placeholder="has or has not">
+        </li>
 
-        <input type="number" name="seats" placeholder="Whats the seat capacity?" >
+        <li class="descript-row">
+            <label for="Smoking Allowed?">Smoking Allowed</label>
+            <input type="text" name="smoker" placeholder="are availabe or are not availiage">
+        </li>
 
-    <label for="MPG">MPG</label>
+        <a href="/user/" class="homeLink">Back</a>
+        <input type="submit" value="Add Description" class="homeLink">
+    </ul>
 
-        <input type="number" name="mpg" placeholder="Whats the average mpg city/hwy?">
-
-    <label for="Child Friendly">Child Friendly</label>
-
-        <input type="text" name="childFriendly" placeholder="yes or no" >
-
-    <label for="Accidents">Accidents</label>
-
-        <input type="text" name="accident" placeholder="has or has not" >
-
-    <label for="Smoking Allowed?">Smoking Allowed</label>
-    
-        <input type="text" name="smoker" placeholder="are availabe or are not availiage" >
-
-    <input type="submit" value="Add Description" class="homeLink">
-    
 </form>
-
-<a href="/user/" class="homeLink">Back</a>

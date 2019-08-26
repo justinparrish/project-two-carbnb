@@ -6,18 +6,18 @@ body {
 
 }
 
-
+/* ----------------- home ----------------------*/
 .home-header, .home-user-button, .home-car-button, .home-descript-button {
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
-
+/* ------------------ user -------------------*/
 .add-user {
   background-color: rgba(14, 14, 14, 0.644);
     border-radius: 9px;
-    border: 3px solid black;
+    border: .5px solid black;
 }
 
 .user-row{
@@ -28,15 +28,76 @@ body {
 }
 
 .user-row > input {
-    flex: 2;
+    flex: 6;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
 }
-
 
 
 
 .user-row > label {
     padding: .5em 1em .5em 0;
     flex: 1;
+    font-size: 20px;
+    font-family: 'Bangers', cursive;
+}
+
+/* --------------------- car -----------------------*/
+
+.add-car {
+    background-color: rgba(14, 14, 14, 0.644);
+    border-radius: 9px;
+    border: .5px solid black;
+  }
+  
+.car-row{
+    display: flex;
+    justify-content: flex-end;
+    padding: .34em;
+      
+}
+  
+.car-row > input {
+    flex: 6;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+  
+  
+  
+.car-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+    font-size: 20px;
+    font-family: 'Bangers', cursive;
+}
+
+/* --------------description ----------------*/
+
+.add-descript {
+    background-color: rgba(14, 14, 14, 0.644);
+    border-radius: 9px;
+    border: .5px solid black;
+  }
+  
+.descript-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .34em;
+      
+}
+  
+.descript-row > input {
+    flex: 6;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+   
+.descript-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+    font-size: 20px;
+    font-family: 'Bangers', cursive;
 }
 
 

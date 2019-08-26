@@ -1,19 +1,24 @@
 <h1>Add Your Car</h1>
 
 <form method="POST" action="/user/cars/carListing">
-    <label for="Make">Make</label>
+    <ul class="add-car">
+        <li class="car-row">
+            <label for="Make">Make</label>
+            <input type="text" name="make" placeholder="Who made it?" required>
+        </li>
 
-        <input type="text" name="make" placeholder="Who made it?" required>
+        <li class="car-row">
+            <label for="Model">Model</label>
+            <input type="text" name="model" placeholder="What's the model?" required>
+        </li>
 
-    <label for="Model">Model</label>
+        <li class="car-row">
+            <label for="Year">Year</label>
+            <input type="number" name="year" placeholder="What's the year?" maxlength="4" required>
+        </li>
 
-        <input type="text" name="model" placeholder="What's the model?" required>
+        <a href="/user/" class="homeLink">Back</a>
+        <input type="submit" value="Add car" class="homeLink">
 
-    <label for="Year">Year</label>
-
-        <input type="number" name="year" placeholder="What's the year?" maxlength="4" required>
-
-    <input type="submit" value="Add car" class="homeLink">
+    </ul>
 </form>
-
-<a href="/user/" class="homeLink">Back</a>
