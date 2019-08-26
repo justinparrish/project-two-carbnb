@@ -38,7 +38,7 @@ carRouter.post('/carListing/', (req,res) => {
 
 carRouter.put('/:vinNum', (req,res) => {
   carApi.editCar(req.params.vinNum, req.body).then(() => {
-    res.render('/template/cars/carListing')
+    res.render('template/cars/carListing')
   })
 })
 
