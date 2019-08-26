@@ -166,7 +166,8 @@ li {
 }
 
 #car-name {
-    font-size: 30px;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 #name:hover, #car-name:hover {
