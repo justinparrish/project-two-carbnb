@@ -1,0 +1,13 @@
+<h1>Search For the Ideal Fit</h1>
+<a href="/user/">Home</a>
+
+<a href="/user/cars/description/search/">Refresh If Broke</a>
+
+<ul>
+    {{#each allDescripts}}
+    <li>
+        {{comfort}}
+        <a href="/user/cars/description/search/{{_id}}">Edit</a>
+    </li>
+    {{/each}}
+</ul>
