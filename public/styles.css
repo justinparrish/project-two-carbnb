@@ -1,29 +1,35 @@
 body {
-    display: flex;
     background-color: #AAF5FB;
     text-align: center;
     font-family: cursive;
 
 }
 
-#home-page {
+/* .home-page {
+
+   
     
-    
-}
+} */
 
 .home-header {
-
+    display: flex;
+    justify-content: center;
 }
 
 .home-user-button {
-
+    display: flex;
+    justify-content: center;
 }
 
 .home-car-button {
+    display: flex;
+    justify-content: center;
 
 }
 
 .home-descript-button {
+    display: flex;
+    justify-content: center;
 
 }
 
