@@ -34,4 +34,5 @@ Fun of Cars is an online/mobile application that can serve multiple purposes. Yo
 ![atl text](public/images/new-erd.png "erd image")
 
 project-board-link: https://github.com/justinparrish/project-two-carrnd/projects/1?add_cards_query=is%3Aopen
+
 heroku-link: https://carrnd-rentacar.herokuapp.com/user
