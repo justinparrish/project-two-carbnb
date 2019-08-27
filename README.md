@@ -27,10 +27,11 @@ a car for your own creative use.
 # Wire Frames
 
 ![atl text](images/wireframe-carbnb.jpeg "wire frame image")
+![atl text](images/wireframe-2.jpg)
 
 # ERD
 
-![atl text](images/erd-carbnb.png "erd image")
+![atl text](images/new-erd "erd image")
 
 project-board-link: https://github.com/justinparrish/project-two-carrnd/projects/1?add_cards_query=is%3Aopen
 heroku-link: https://carrnd-rentacar.herokuapp.com/user
