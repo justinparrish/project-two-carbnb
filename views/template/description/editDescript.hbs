@@ -8,12 +8,12 @@
 
         <li class="descript-row">
             <label for="Comfort">Comfort</label>
-            <input type="number" name="comfort" placeholder="Rate 1-10" value="{{oneD.comfort}}" required>
+            <input type="number" min="1" max="10" name="comfort" placeholder="Rate 1-10" value="{{oneD.comfort}}" required>
         </li>
 
         <li class="descript-row">
             <label for="Seats">Seats</label>
-            <input type="number" name="seats" placeholder="Whats the seat capacity?" value="{{oneD.seats}}" required>
+            <input type="number" min="1" max="12" name="seats" placeholder="Whats the seat capacity?" value="{{oneD.seats}}" required>
         </li>
 
         <li class="descript-row">
