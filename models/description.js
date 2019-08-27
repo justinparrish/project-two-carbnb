@@ -5,7 +5,7 @@ const mongoose = require('./connection.js')
 
 const DescriptionSchema = new mongoose.Schema({
   color: String,
-  comfort: String,
+  comfort: Number,
   seats: Number,
   mpg: Number,
   childFriendly: String,
@@ -19,7 +19,7 @@ const DescriptionCollection = mongoose.model('Description', DescriptionSchema)
 const createDescription = () => {
   return DescriptionCollection.create({
     color: '',
-    comfort: '',
+    comfort: 9,
     seats: 4,
     mpg: 18,
     childFriendly: true,
