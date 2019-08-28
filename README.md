@@ -33,7 +33,7 @@ Fun of Cars is an online/mobile application that can serve multiple purposes. Yo
 
 ## ERD
 
-![atl text](public/images/new-erd.png "erd image")
+![atl text](public/images/erd123.png "erd image")
 
 ## Used Resources
 [QuackIt FlexBox Forms](https://www.quackit.com/html/html_editors/scratchpad/?example=/css/flexbox/tutorial/align_form_elements_with_flexbox_example_2 "used for forms")
