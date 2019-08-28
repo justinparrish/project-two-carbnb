@@ -36,8 +36,9 @@ Fun of Cars is an online/mobile application that can serve multiple purposes. Yo
 ![atl text](public/images/new-erd.png "erd image")
 
 ## Used Resources
-[QuackIt](https://www.quackit.com/html/html_editors/scratchpad/?example=/css/flexbox/tutorial/align_form_elements_with_flexbox_example_2 "used for forms")
+[QuackIt FlexBox Forms](https://www.quackit.com/html/html_editors/scratchpad/?example=/css/flexbox/tutorial/align_form_elements_with_flexbox_example_2 "used for forms")
 
+### Raw Links
 project-board-link: https://github.com/justinparrish/project-two-carrnd/projects/1?add_cards_query=is%3Aopen
 
 heroku-link: https://carrnd-rentacar.herokuapp.com/user
