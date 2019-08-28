@@ -31,19 +31,22 @@ descriptionRouter.get('/:descriptId', (req,res) => {
 
 descriptionRouter.post('/search', (req,res) => {
   descriptionApi.addDescription(req.body).then(() => {
-    res.render('template/description/descriptSearch')
+    // res.render('template/description/descriptSearch')
+    res.redirect('/user/cars/description/search')
   })
 })
 
 descriptionRouter.put('/:descriptId', (req,res) => {
   descriptionApi.editDescription(req.params.descriptId, req.body).then(() => {
-    res.render('template/description/descriptSearch')
+    // res.render('template/description/descriptSearch')
+    res.redirect('/user/cars/description/search')
   })
 })
 
 descriptionRouter.delete('/:descriptId', (req,res) => {
   descriptionApi.deleteDescription(req.params.descriptId).then(() => {
-    res.render('template/description/descriptSearch')
+    // res.render('template/description/descriptSearch')
+    res.redirect('/user/cars/description/search')
   })
 })
 

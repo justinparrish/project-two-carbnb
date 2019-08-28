@@ -37,21 +37,24 @@ userRouter.get('/:userId', (req,res) => {
 //to add a user to carListing page
 userRouter.post('/userListing', (req,res) => {
   userApi.addUser(req.body).then(() => {
-    res.render('template/users/userListing')
+    // res.render('template/users/userListing')
+    res.redirect('/user/userlisting')
   })
 })
 
 //to update a user
 userRouter.put('/:userId', (req,res) => {
   userApi.editUser(req.params.userId, req.body).then(() => {
-    res.render('template/users/userListing')
+    // res.render('template/users/userListing')
+    res.redirect('/user/userlisting')
   })
 })
 
 //to delete a user
 userRouter.delete('/:userId', (req,res) => {
   userApi.deleteUser(req.params.userId).then(() => {
-    res.render('template/users/userListing')
+    // res.render('template/users/userListing')
+    res.redirect('/user/userlisting')
   })
 })
 

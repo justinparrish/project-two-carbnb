@@ -31,20 +31,23 @@ carRouter.get('/:vinNum', (req,res) => {
 
 carRouter.post('/carListing/', (req,res) => {
   carApi.addCar(req.body).then(() => {
-    res.render('template/cars/carListing')
+    // res.render('template/cars/carListing')
+    res.redirect('/user/cars/carListing')
   })
 })
 
 
 carRouter.put('/:vinNum', (req,res) => {
   carApi.editCar(req.params.vinNum, req.body).then(() => {
-    res.render('template/cars/carListing')
+    // res.render('template/cars/carListing')
+    res.redirect('/user/cars/carListing')
   })
 })
 
 carRouter.delete('/:vinNum', (req,res) => {
   carApi.deleteCar(req.params.vinNum).then(() => {
-    res.render('template/cars/carListing')
+    // res.render('template/cars/carListing')
+    res.redirect('/user/cars/carListing')
   })
 })
 
